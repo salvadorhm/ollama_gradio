@@ -14,7 +14,6 @@ def chat(message, history):
 
 ui = gr.ChatInterface(
     fn=chat,
-    type="messages",
     examples=[{"text": "Hello", "files": []}],
     title="S.A.M.M.",
     multimodal=True)

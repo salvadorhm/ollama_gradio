@@ -3,10 +3,10 @@ import gradio as gr
 
 def chat(message, history):
     response = ollama.chat(
-        model='qwen2.5:0.5b', 
+        model='qwen3.5:2b', 
         messages=[{'role': 'user','content': message}],
         stream=False,
     )
     return response['message']['content']
 
-gr.ChatInterface(chat, type="messages").launch()
+gr.ChatInterface(fn=chat).launch()
