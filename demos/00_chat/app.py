@@ -9,4 +9,8 @@ def chat(message, history):
     )
     return response['message']['content']
 
-gr.ChatInterface(fn=chat).launch()
+ui = gr.ChatInterface(
+    fn=chat,
+    title="S.A.M.M.")
+
+ui.launch(share=False)
