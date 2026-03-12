@@ -3,7 +3,7 @@ import gradio as gr
 
 def chat(message, history):
     response = ollama.chat(
-        model='gemma3:270m', 
+        model='gemma3:1b', 
         messages=[{'role': 'user','content': message}],
         stream=False,
     )
